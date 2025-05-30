@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDWEB</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+</head>
+<body>
+  <!--Container centra el contenido-->
+ <header class="container">
+   <nav>
+    <ul>
+      <li>
+        <b>
+          EXPO MANAGEMENT SYSTEM
+        </b>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#">Integrantes</a></li>
+      <li><a href="#">Tareas</a></li>
+      <li><a href="#">Mi Perfil</a></li>
+      <li><a href="#" role="button">Cerrar Sesion</a></li>
+   </nav>
+ </header>
+
+   <main class="container">
+     <h2>Integrantes del Equipo</h2>
+
+      <table id="tabla" class="overflow-auto">
+       <thead>
+          <tr>
+            <!--tr Tble row(fila)-->
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo Electrònico</th>
+              <th>Acciones</th><!--Botones para editar y eliminar-->
+          </tr>
+       </thead>
+           <tbody>
+            <!--aqui van los registros que vienen en la api-->
+           </tbody>
+       </table>
+ </main>
+ <script src="JS/srcipt.js"></script>
+</body>
+</html>
