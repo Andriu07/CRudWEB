@@ -32,7 +32,7 @@ function MostrarDatos(datos){
               <td>${integrante.correo}</td>
               <td>
                 <button>Editar</button>
-                <button>Eliminar</button>
+                <button onclick="EliminarPersona(${integrante.id})">Eliminar</button>
               </td>
           </tr>
         `;
@@ -103,4 +103,18 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
     }
 
 });
+
+
+//funcion para borrar si el usuario si escogio borrar
+async function EliminarPersona(id){
+  const confirmacion = confirm("¿Realmente desea eliminar el registro?");
+
+  if(confirmacion){
+    await fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+    })
+
+    ObtenerIntegrantes();
+  }
+}
 
